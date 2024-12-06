@@ -236,37 +236,41 @@
                     <p>Join in family activities like bonding exercises and games.</p>
                     <img src="assets/gif/fam2.gif" style="width:100%" alt="Family Activity 2">
                     <p>Experience nature walks and picnics with your loved ones.</p>
-                    <img src="assets/gif/familyIsland.gif" style="width:100%" alt="Family Activity 3">
+                    <img src="assets/gif/fam3.gif" style="width:100%" alt="Family Activity 3">
                     <p>Engage in creative activities for all ages.</p>
                 `;
             } else if (island === 'Friend Island') {
                 modalContent.innerHTML = `
                     <h3>Friend Island Content</h3>
-                    <img src="assets/friend1.jpg" style="width:100%" alt="Friend Activity 1">
+                    <img src="assets/gif/frenny1.gif" style="width:100%" alt="Friend Activity 1">
                     <p>Create lasting memories with friends through exciting adventures.</p>
-                    <img src="assets/friend2.jpg" style="width:100%" alt="Friend Activity 2">
+                    <img src="assets/gif/frenny2.gif" style="width:100%" alt="Friend Activity 2">
                     <p>Enjoy fun games and experiences with your best buddies.</p>
-                    <img src="assets/friend3.jpg" style="width:100%" alt="Friend Activity 3">
+                    <img src="assets/gif/frenny3.gif" style="width:100%" alt="Friend Activity 3">
+                    <p>Challenge each other in creative competitions.</p>
+                    <img src="assets/gif/frenny4.gif" style="width:100%" alt="Friend Activity 3">
+                    <p>Challenge each other in creative competitions.</p>
+                    <img src="assets/gif/frenny5.gif" style="width:100%" alt="Friend Activity 3">
                     <p>Challenge each other in creative competitions.</p>
                 `;
             } else if (island === 'Study Island') {
                 modalContent.innerHTML = `
                     <h3>Study Island Content</h3>
-                    <img src="assets/study1.jpg" style="width:100%" alt="Study Activity 1">
+                    <img src="assets/gif/study1.gif" style="width:100%" alt="Study Activity 1">
                     <p>Immerse yourself in a quiet environment for focused learning.</p>
-                    <img src="assets/study2.jpg" style="width:100%" alt="Study Activity 2">
+                    <img src="assets/gif/study2.gif" style="width:100%" alt="Study Activity 2">
                     <p>Engage in deep research and personal development.</p>
-                    <img src="assets/study3.jpg" style="width:100%" alt="Study Activity 3">
+                    <img src="assets/gif/study3.gif" style="width:100%" alt="Study Activity 3">
                     <p>Expand your knowledge with structured study sessions.</p>
                 `;
             } else if (island === 'Hobby Island') {
                 modalContent.innerHTML = `
                     <h3>Hobby Island Content</h3>
-                    <img src="assets/hobby1.jpg" style="width:100%" alt="Hobby Activity 1">
+                    <img src="assets/gif/hobby1.gif" style="width:100%" alt="Hobby Activity 1">
                     <p>Explore new hobbies and immerse yourself in creativity.</p>
-                    <img src="assets/hobby2.jpg" style="width:100%" alt="Hobby Activity 2">
+                    <img src="assets/gif/hobby2.gif" style="width:100%" alt="Hobby Activity 2">
                     <p>Engage in fun art, craft, and music activities.</p>
-                    <img src="assets/hobby3.jpg" style="width:100%" alt="Hobby Activity 3">
+                    <img src="assets/gif/hobby3.gif" style="width:100%" alt="Hobby Activity 3">
                     <p>Enjoy time dedicated to your passions and interests.</p>
                 `;
             }
