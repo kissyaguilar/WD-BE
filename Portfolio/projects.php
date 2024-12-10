@@ -15,62 +15,183 @@
 </head>
 
 <style>
+    <style>
+    /* Import Google Fonts */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+    /*Duplicate CSS here to ensure it works correctly.
+   This is because it doesn't always work in my browser.*/
+    /* Background Styling */
+    body {
+        background: linear-gradient(to bottom, #07444d, #46c0d2);
+        /* Consistent gradient */
+        color: rgba(242, 230, 238, 1);
+        overflow: auto;
+        position: relative;
+        min-height: 100vh;
+        height: 100%;
+    }
+
+    /* Navbar Styling */
+    .header {
+        background-color: 337e95;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        z-index: 100;
+        box-shadow: 0 4px 15px rgba(16, 0, 10, 0.4);
+    }
+
+    .navbar a {
+        font-size: 18px;
+        color: rgba(242, 230, 238, 1);
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 20px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        position: relative;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: #18697c;
+    }
+
+    .navbar a:hover::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0.6));
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgba(255, 255, 255, 0.4);
+        animation: starBurst 1.5s ease-out forwards;
+    }
+
+    /* Logo Styling */
+    .logo-image {
+        width: 35px;
+        height: auto;
+    }
+
+
+    .auto-type {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .auto-type {
+            font-size: 2.5rem;
+        }
+
+        .profile-image {
+            max-width: 75%;
+        }
+
+        .display-5 {
+            font-size: 2rem;
+        }
+    }
+
+    /* Starry Background */
+    .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+        pointer-events: none;
+        background: linear-gradient(to bottom, #4aadcc, #02121a);
+        /* Ensure gradient consistency */
+    }
+
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        animation: moveStars linear infinite;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 1.0);
+    }
+
+    @keyframes moveStars {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+    }
+
+    /* Starburst Animation */
+    @keyframes starBurst {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-img-top {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
     .btn-primary {
-        background-color: #3b074d;
-        border-color: #3b074d;
-        color: white;
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
     .btn-primary:hover {
-        background-color: #852d69;
-        border-color: #852d69;
+        background-color: #0056b3;
+        border-color: #004494;
     }
 
     .projects {
         text-align: center !important;
         margin-top: 60px;
         padding: 40px
-    }
-
-    .projects .card {
-        background-color: transparent;
-        color: rgb(253, 253, 253);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 5px;
-        position: relative;
-        overflow: hidden;
-        background-image: url('images/bgProjCard.jpg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.7;
-        z-index: 1;
-        border-radius: 5px;
-    }
-
-    .projects .card * {
-        position: relative;
-        z-index: 2;
-    }
-
-    .projects .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 10px 20px rgba(166, 160, 160, 0.2);
-    }
-
-    .projects .card {
-        animation: fadeIn 1.0s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 </style>
 
@@ -113,45 +234,20 @@
             <span class="display-3 auto-type"></span>
         </div>
         <div class="row my-5" id="container">
+            <!-- Project Box -->
+            <div class="col-md-4">
+                <div class="card" style="background-color: #d6eaff; border-color: #b3d8ff;">
+                    <img src="images/A08proj.gif" class="card-img-top" alt="Project Image">
+                    <div class="card-body text-center" style="background-color: #89CFF0;">
+                        <h5 class="card-title">Islands of Personality and Contents</h5>
+                        <p class="card-text">These are my core memories that you can explore.</p>
+                        <a href="../Activities/A08/index.php" class="btn btn-primary">A08</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script>
-        var contents = [
-            {
-                "link": "Project1",
-                "description": "Inside and Out"
-            },
-
-        ]
-
-        var container = document.getElementById("container");
-
-        for (var i = 0; i < contents.length; i++) {
-
-            var courseCode = "WD";
-            var title = contents[i].link;
-            var siteLink = "https://kissyaguilar/WD-BE/" + title;
-            var githubLink = "https://github.com/kissyaguilar/WD-BE/tree/main/tree/main/" + title;
-
-
-            var description = contents[i].description;
-
-            container.innerHTML += `
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                      <div class="card my-3 rounded-5 overflow-hidden" style="height: fit-content">
-                        <embed type="text/html" src="`+ siteLink + `" width="100%" height="200px">
-                        <div class="card-body shadow-lg">
-                          <h4 class="card-title">`+ title + `</h4>
-                         <h8 <p class="card-text text-body-primary">`+ description + ` </p> </h8>
-                          <a href="`+ githubLink + `" class="btn btn-primary">GitHub</a>
-                          <a href="`+ siteLink + `" class="btn btn-primary">Site</a>
-                        </div>
-                      </div>
-                    </div>
-                  `;
-        }
-    </script>
 
     <!-- Starry Background - purple -->
     <div class="stars">
