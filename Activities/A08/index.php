@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="shortcut icon" href="assets/img/kissyTab.png" type="image/png" />
+<link rel="shortcut icon" href="assets/img/kissyIcon.png" type="image/png" />
 
 <body>
   <div class="bgimg w3-display-container w3-animate-opacity w3-text-white" id="home">

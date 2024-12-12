@@ -22,7 +22,7 @@ $islandContents = $selectedIsland ? fetchIslandContents($selectedIsland->islandO
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/font/font.css">
     <link rel="stylesheet" href="assets/css/listStyle.css">
-    <link rel="shortcut icon" href="assets/img/kissyTab.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/img/kissyIcon.png" type="image/png" />
     <!-- //No Bootstrap since it changes the style -->
     <style>
         .bgimg {
