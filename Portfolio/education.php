@@ -12,11 +12,6 @@
     <link rel="stylesheet" href="stylesHome.css">
 
     <style>
-        .education {
-            text-align: center;
-            padding: 100px;
-        }
-
         /*Duplicate CSS here to ensure it works correctly.
    This is because it doesn't always work in my browser.*/
         /* Import Google Fonts */

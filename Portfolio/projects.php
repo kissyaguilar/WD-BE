@@ -15,12 +15,11 @@
 </head>
 
 <style>
-    <style>
+    /*Duplicate CSS here to ensure it works correctly.
+   This is because it doesn't always work in my browser.*/
     /* Import Google Fonts */
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-    /*Duplicate CSS here to ensure it works correctly.
-   This is because it doesn't always work in my browser.*/
     /* Background Styling */
     body {
         background: linear-gradient(to bottom, #07444d, #46c0d2);
